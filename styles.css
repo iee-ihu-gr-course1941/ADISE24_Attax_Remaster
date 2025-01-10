@@ -1,0 +1,161 @@
+/* Global styles */
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    border: 4px solid lime;
+    padding: 20px;
+    box-shadow: 0 0 10px lime;
+    background: radial-gradient(circle, black, darkgreen);
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: lime;
+    text-shadow: 0 0 10px lime;
+}
+
+.game-area {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-info {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-template-rows: repeat(7, 40px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: white; /* Default color for empty cells */
+    border: 2px solid lime;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    color: #c2c2c2;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s, border-color 0.1s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    border-color: yellow;
+}
+
+.cell.red {
+    background: red;
+    border-color: darkred;
+}
+
+.cell.blue {
+    background: blue;
+    border-color: darkblue;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid lime;
+    background: black;
+    color: lime;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px lime;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: lime;
+    color: black;
+    box-shadow: 0 0 15px yellow;
+}
+
+#join-game-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#game-code-input,
+#player-name-input{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+    border: 2px solid lime;
+    background: black;
+    color: lime;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 10px lime;
+}
+
+#game-code-input:focus,
+#player-name-input:focus{
+    border-color: yellow;
+    box-shadow: 0 0 15px yellow;
+}
+
+#join-game-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid lime;
+    background: black;
+    color: lime;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px lime;
+    transition: all 0.2s ease;
+}
+
+#join-game-form button:hover {
+    background: lime;
+    color: black;
+    box-shadow: 0 0 15px yellow;
+}
+
+
+.valid-move {
+    background-color: yellow; /* Highlight for valid moves */
+}
+.selected {
+    border: 2px solid red; /* Highlight the selected piece */
+}
+
+

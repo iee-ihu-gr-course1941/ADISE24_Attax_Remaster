@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataxx Retro Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ataxx Game</h1>
+        </header>
+
+        <!-- Game Setup Area (Create or Join Game) -->
+        <div id="game-setup-area">
+            <h2>Setup Game</h2>
+
+            <!-- Create Game Button -->
+            <button id="create-game-btn">Create New Game</button>
+
+            <p>or</p>
+
+            <!-- Join Game Area -->
+            <div id="join-game-area">
+                <form id="join-game-form">
+                    <input type="text" id="game-code-input" placeholder="Enter Game Code" required />
+                    <input type="text" id="player-name-input" placeholder="Enter Your Name" required />
+                    <button type="submit">Join Game</button>
+                </form>
+            </div>
+
+        </div>  
+
+        <!-- Game Area (hidden initially) -->
+        <div class="game-area" style="display:none;">
+            <div class="game-info">
+                <h2>Game Code: <span id="game-code"></span></h2>
+                <h3>Player Color: <span id="player-color"></span></h3>
+                <h3>Player Position: <span id="player-position"></span></h3>
+                <h3 id="game-status-message"></h3>
+            </div>
+
+            <div id="game-board" class="game-board"></div> <!-- Game board placeholder -->
+
+            <div id="leaderboard" class="hidden">
+                <h2>Leaderboard</h2>
+                <ul id="leaderboard-list"></ul>
+            </div>
+          
+            <button id="refresh-game-state" disabled>Refresh Game State</button>
+        </div>
+
+        <footer>
+            <!-- Start Game Button (hidden initially) -->
+            <button id="start-game" class="hidden">Start Game</button>
+            <!-- Show Leaderboard Button (hidden initially) -->
+            <button id="show-leaderboard" class="hidden">Show Leaderboard</button>
+        </footer>
+    </div>
+</body>
+</html>
